@@ -28,7 +28,7 @@ console.log(serie.value)
 <template>
     <div class="w-full flex flex-col space-y-4 text-gray-200">
 
-            <div style="background-image: url('/storage/fondo-welcome.jpeg'); height: 20em;background-repeat: no-repeat; background-size: cover " class="justify-end" >
+            <div style="background-image: url('/storage/fondo-welcome.jpeg'); height: 20em;background-repeat: no-repeat; background-size: cover;  " class="justify-end" >
                 <div class="bg-black w-1/2 p-5 rounded-xl bg-opacity-80">
 
                     <h3 class="text-4xl  font-bold">{{ serie.titulo }}</h3>
@@ -54,7 +54,7 @@ console.log(serie.value)
                 <template v-for="serie in series">
                     <div v-if="serie.categoria_id === categoria.id" class="bg-gray-800 p-4 rounded">
                         <!--        <img src="{{serie.url}}" alt="">-->
-                        <img class="p-5" src="/storage/fondo-welcome.jpeg" alt="">
+                        <img class="p-5 " src="/storage/fondo-welcome.jpeg" alt="">
                         <p class="text-sm font-semibold"><a :href="route('series.show', serie.id)">{{ serie.titulo }}</a> </p>
                     </div>
                 </template>
