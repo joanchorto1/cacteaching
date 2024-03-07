@@ -1,5 +1,6 @@
 
-![Devflix_logo.png](public%2Fstorage%2FDevflix_logo.png)
+![Devflix_logo](https://github.com/joanchorto1/cacteaching/assets/113586166/1d6216a2-a409-43b4-83b6-2a7a0186793a)
+
 ____________________________________
 ## 1. Introducción
 Este proyecto es una aplicación web que permite a los usuarios registrados ver videos de cursos de programación. Los usuarios pueden ver videos de cursos de programación, marcar videos como favoritos, ver videos que han marcado como favoritos, ver videos que han visto, ver videos que han marcado como vistos
