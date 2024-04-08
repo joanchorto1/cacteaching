@@ -8,7 +8,9 @@ const props = defineProps({
     categorias: Array,
     series: Array,
     videos: Array,
-    peliculas: Array
+    peliculas: Array,
+    admins: Array,
+    clients: Array,
 })
 
 
@@ -27,7 +29,7 @@ const props = defineProps({
                 <div class=" overflow-hidden shadow-xl sm:rounded-lg">
 
                     <template v-if="$page.props.auth.user.admin">
-                        <AdminDashboard />
+                        <AdminDashboard v-bind:clients="clients" v-bind:peliculas="peliculas" v-bind:videos="videos" v-bind:admins="admins" v-bind:series="series" v-bind:categorias="categorias"/>
                     </template>
                     <template v-else>
 

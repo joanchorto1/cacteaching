@@ -9,7 +9,7 @@ class Serie extends Model
 {
     // app/Models/Serie.php
 
-    protected $fillable = ['titulo', 'descripcion', 'categoria_id'];
+    protected $fillable = ['titulo', 'descripcion', 'categoria_id', 'imagen'];
 
     public function categoria()
     {

@@ -1,3 +1,3 @@
 <template>
-    <img src="/storage/Devflix_logo.png" alt="">
+    <img  src="/storage/Devflix_logo.png" alt="">
 </template>

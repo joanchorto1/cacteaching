@@ -49,8 +49,18 @@ const logout = () => {
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                                    Inicio
                                 </NavLink>
+                                <template v-if="!($page.props.auth.user.admin)">
+                                    <NavLink :href="route('peliculas.index')" :active="route().current('peliculas.index')">
+                                        Peliculas
+                                    </NavLink>
+                                    <NavLink :href="route('series.index')" :active="route().current('series.index')">
+                                        Series
+                                    </NavLink>
+                                </template>
+
+
                             </div>
                         </div>
 
@@ -192,8 +202,17 @@ const logout = () => {
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
+                            Inicio
                         </ResponsiveNavLink>
+                        <template v-if="!($page.props.auth.user.admin)">
+
+                        <ResponsiveNavLink :href="route('peliculas.index')" :active="route().current('peliculas.index')">
+                            Peliculas
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('series.index')" :active="route().current('series.index')">
+                            Series
+                        </ResponsiveNavLink>
+                        </template>
                     </div>
 
                     <!-- Responsive Settings Options -->

@@ -14,6 +14,7 @@ $table->id();
 $table->string('titulo');
 $table->text('descripcion');
 $table->foreignId('categoria_id')->constrained();
+$table->string('imagen')->nullable();
 $table->timestamps();
 });
 }

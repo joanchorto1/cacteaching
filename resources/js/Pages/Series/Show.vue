@@ -18,13 +18,14 @@ const props = defineProps({
                     <div class=" flex flex-col space-y-4  text-gray-200">
 
                         <div
-                            style="background-image: url('/storage/fondo-welcome.jpeg'); height: 20em;background-repeat: no-repeat; background-size: cover "
+                            :style="{backgroundImage: `url(${serie.imagen})`, height: '20em',backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition:'center'} "
                             class="justify-end">
-                            <div class="bg-black w-1/2 p-5 rounded-xl bg-opacity-80">
-                                <h3 class="text-4xl  font-bold">{{ serie.titulo }}</h3>
-                                <p class="mt-5">{{ serie.descripcion }}</p>
-                            </div>
 
+
+                        </div>
+                        <div class=" w-1/2  rounded-xl bg-opacity-80">
+                            <h3 class="text-4xl  font-bold">{{ serie.titulo }}</h3>
+                            <p class="mt-5">{{ serie.descripcion }}</p>
                         </div>
                         <!--Series-->
                         <div class="   border-b-2 border-red-600 flex.col pb-5 items-center justify-between">
@@ -35,7 +36,7 @@ const props = defineProps({
                                 <div class="text-white">
 
                                     <a :href="route('videos.show', video.id)">
-                                        <img class="h-48 " src="/storage/fondo_welcome.jpeg" alt="">
+                                        <img class="h-48 " :src="video.imagen" alt="">
                                     </a>
 
 

@@ -12,8 +12,9 @@ class Pelicula extends Model
     protected $fillable = [
         'titulo',
         'descripcion',
-        'url',
+        'imagen',
         'categoria_id',
+        'video',
 
     ];
 

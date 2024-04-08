@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->text('descripcion');
-            $table->string('url');
             $table->foreignId('categoria_id')->constrained();
+           $table->string('imagen');
+            $table->string('video');
             $table->timestamps();
         });
     }
